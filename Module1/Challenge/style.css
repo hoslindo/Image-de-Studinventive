@@ -1,0 +1,147 @@
+/* Déclaration des constantes (les couleurs + hauteur du <header>) */
+:root {
+    --background-dark:#053B44;
+    --text:#565E65;
+    --title2:#029D5B;
+    --titles:#1C2126;
+    --yellow:#D5F31F;
+    --headerheight:75px;
+    --Accueilpaddingright:5%;
+}
+/* Sélection de la police de caractères sans-serif pour tous les conteneurs (police standard) */
+* {
+    font-family: sans-serif;
+}
+/* Déclaration des caractéristiques constantes vs balise */
+h1 {
+    color:var(--title2)
+}
+h4 {
+    color:var(--yellow);
+}
+.titre-section {
+    font-size: 4em;
+    font-weight: light;
+}
+/* Codage du header */
+header {
+    background-color: white;
+    padding:20px;
+    box-sizing: border-box;
+    width: 100%;
+    height:var(--headerheight);
+    position:sticky;
+    top:0px
+}
+header > div {
+    display:flex;
+    justify-content: space-between;
+}
+header > div > strong {
+    display:block;
+    font-size: 1.2em;
+    color: var(--title2);
+}
+header nav {
+    width:80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+header nav a {
+    padding:5px;
+    color:#000000;
+    text-decoration:none;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+/* Codage de la section Accueil */
+#Accueil {
+   background-image: url("ressources/Photo-du-haut.jpg");
+   background-origin: border-box;
+   background-size: cover;
+   background-attachment: local;
+   background-position: center;
+   box-sizing: border-box;
+   width:100%;
+   height: 700px;
+   border-top: 1px white solid;
+}
+#ligne1-Accueil {
+    color: white;
+    padding-top:450px;
+    padding-right:var(--Accueilpaddingright);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 0;
+}
+#ligne2-Accueil {
+    padding-right:var(--Accueilpaddingright);
+    font-size: 2.5em;
+    font-weight: bolder;
+    text-align: right;
+    margin-top: 10px;
+}
+/* Codage de la section Notre_equipe */
+#Notre_equipe {
+    padding-top: var(--headerheight);
+    border-bottom: 1px white solid;
+}
+#titre-Notre_equipe {
+    text-align: center;   
+}
+#Notre_equipe > p {
+    padding-left: var(--Accueilpaddingright);
+    padding-right: var(--Accueilpaddingright);
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+#trombinoscope-Notre_equipe {
+    padding: 0 var(--Accueilpaddingright);
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#trombinoscope-Notre_equipe > div {
+    width:300px;
+}
+#trombinoscope-Notre_equipe img {
+    display: block;
+    width:300px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px white solid;
+    border-radius: 50% 50% 50% 50%;
+}
+.nom-Notre_equipe {
+    text-align: center;
+    font-size: 2em;
+}
+.cv-Notre_equipe {
+    text-align: center;
+    font-size: 1.5em;
+    color:var(--text);
+}
+/* Codage de la section Témoignages */
+#Temoignages {
+    margin-top: var(--headerheight);
+    padding: 0 var(--Accueilpaddingright);
+    background-color: var(--background-dark);
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.unite-Temoignages > h4 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+.unite-Temoignages > p {
+    font-size:1.75em;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+}
+

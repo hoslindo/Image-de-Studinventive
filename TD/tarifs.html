@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tarif - Robbie Lens Photographie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Cette section de code est à conserver pour réutilisation après adaptation aux polices de caractères souhaitées : -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+    <!--  NB Cette instance s'applique aux polices Manrope et Montserrat (voir https://fonts.google.com) -->
+</head>
+
+<!-- structuré de façon standard avec un <header>, un <main> et un <footer> -->
+<body>
+    <!-- le logo de RL doit apparaître calé à gauche, les liens vers les autres pages doivent
+         s'étaler sur 50% (environ) de la page en plein écran, à partir de la droite -->
+    <header>
+    <!------------------------------------------------------------------------------>
+    <!-- Ce header est à reproduire à l'identique sur les autres pages du site RL -->
+    <!------------------------------------------------------------------------------>
+        <nav> <!-- balise <nav> inutile ici car directement imbriquée dans <header> -->
+            <a href="index.html">
+                <img id="grand-logo" src="../images/logo.png" title="logo Robbie Lens" alt="Logo Robbie Lens" >
+            </a>
+            <div id="header-liens">
+                <a href="index.html">       Accueil    </a>
+                <a href="a-propos.html">       À propos   </a>
+                <a href="tarifs.html">    Tarifs      </a>
+                <a href="portfolio.html">   Portfolio  </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- structuré en 2 <section> correspondant aux 2 tableaux de la page Tarifs -->
+    <main id="page-tarifs">
+        <!-- Panneau Tarifs : tableau 4 lignes (dont 1 de titres) x 5 colonnes (dont 2 d'espacements) en dessous du titre "Tarifs" et d'un bouton "CONTACTEZ MOI" qui renvoie 
+            au panneau CONTACT de la page d'accueil -->
+        <section id="section-tarifs">
+            <div id="tarifs-bouton">
+                <h2> Tarifs </h2>
+                <a class="bouton" id="bouton-vers-panneau-contact" href="index.html#section-contact">
+                    <p> CONTACTEZ MOI </p>
+                </a>
+            </div>
+            <table id="tableau-tarifs">
+                <thead>
+                    <tr id="tarifs-titres">
+                        <th class="tarifs">Shooting photo              </th>
+                        <th class="intercalaire"></th>
+                        <th class="tarifs">Retouches                   </th>
+                        <th class="intercalaire"></th>
+                        <td class="tarifs">Album photos                </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="tarifs-prestations">
+                        <td class="tarifs">Pour capturer vos moments les plus précieux et garder un souvenir 
+                             impérissable je me déplace en Île de France pour réaliser vos photos </td>
+                        <td class="intercalaire"></td>
+                        <td class="tarifs">Vous souhaitez retoucher vos photos pour un résultat professionnel ?<br>
+                            bénéficier d'un rendu optimal pour vos publications </td>
+                        <td class="intercalaire"></td>
+                        <td class="tarifs">Partagez avec vos proches et vos clients des moments partagés 
+                            ensemble à travers un album photos personnalisé                    </td>
+                    </tr>
+                    <tr id="tarifs-prix">
+                        <td class="tarifs">350€/demi-journée                     </td>
+                        <td class="intercalaire"></td>
+                        <td class="tarifs">550€/demi-journée                     </td>
+                        <td class="intercalaire"></td>
+                        <td class="tarifs">400€ album A4                     </td>
+                    </tr>
+                    <tr id="tarifs-conditions">
+                        <th class="tarifs derniere"> Matériel, déplacement inclus                     </td>
+                        <td class="intercalaire"></td>
+                        <td class="tarifs derniere">2 allers/retours par photos                   </td>
+                        <td class="intercalaire"></td>
+                        <th class="tarifs derniere">30 pages recto/verso                     </th>
+                    </tr>
+                </tbody>    
+            </table>
+        </section>
+
+        <section id="section-studiopro">
+        <!-- Panneau Studio pro : tableau 3 lignes (dont 1 de titres) x 3 colones alignées avec celles du tableau du panneau Tarifs) en dessous du titre "Studiopro" -->
+            <h2>  Studio pro </h2>
+            <table id="tableau-studiopro">
+                <thead class="studiopro">
+                    <tr id="studiopro-titres">
+                        <th class="colonne1">Désignation                    </th>
+                        <th class="colonne2">Quantité                    </th>
+                        <th class="colonne3">Prix                    </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="studiopro-prestations">
+                        <td class="colonne1">Retouches photo<br> studio professionnel                     </td>
+                        <td class="colonne2">x 800 photos                     </td>
+                        <td class="colonne3">3200€/800 photos                    </td>
+                    </tr>
+                    <tr id="studiopro-conditions">
+                        <td class="colonne1">Assistant photo<br>lumière professionnel                     </td>
+                        <td class="colonne2">x2 sets studio                     </td>
+                        <td class="colonne3">1500€/journée                     </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- le logo de RL doit apparaître calé à gauche, les pictos tweeter et instagram - dans cet ordre - calés à droite -->
+    <footer>
+    <!------------------------------------------------------------------------------>
+    <!-- Ce footer est à reproduire à l'identique sur les autres pages du site RL -->
+    <!------------------------------------------------------------------------------>
+        <nav> <!-- balise <nav> inutile ici car directement imbriquée dans <footer> -->
+            <a href="index.html">
+                <img id="petit-logo" src="../images/logo.png" title="picto Robbie Lens" alt="Logo Robbie Lens" >
+            </a>
+            <div id="footer-nav">
+                <a target="_blank" href="https://twitter.com/" class="lien-icone">
+                    <img src="../images/twitter.png" alt="Logo Twitter" >
+                </a>
+                <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
+                    <img src="../images/instagram.png" alt="Logo Instagram" >
+                </a>
+            </div>
+        </nav>
+    </footer>
+</body>
+
+</html>

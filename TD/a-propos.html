@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>À propos - Robbie Lens Photographie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Cette section de code est à conserver pour réutilisation après adaptation aux polices de caractères souhaitées : -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+    <!--  NB Cette instance s'applique aux polices Manrope et Montserrat (voir https://fonts.google.com) -->
+</head>
+
+<!-- structuré de façon standard avec un <header>, un <main> et un <footer> -->
+<body>
+    <!-- le logo de RL doit apparaître calé à gauche, les liens vers les autres pages doivent
+         s'étaler sur 50% (environ) de la page en plein écran, à partir de la droite -->
+    <header>
+    <!------------------------------------------------------------------------------>
+    <!-- Ce header est à reproduire à l'identique sur les autres pages du site RL -->
+    <!------------------------------------------------------------------------------>
+        <nav> <!-- balise <nav> inutile ici car directement imbriquée dans <header> -->
+            <a href="index.html">
+                <img id="grand-logo" src="../images/logo.png" title="logo Robbie Lens" alt="Logo Robbie Lens" >
+            </a>
+            <div id="header-liens">
+                <a href="index.html">       Accueil    </a>
+                <a href="a-propos.html">       À propos   </a>
+                <a href="tarifs.html">    Tarifs      </a>
+                <a href="portfolio.html">   Portfolio  </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- structure en deux sections correspondant 
+            1/ au haut de la page avec 2 rangée de 5 photos de RL
+            2/ au texte, qui termine par un bouton pour renvoyer à la page tarifs -->
+    <main id="page-a-propos">
+        <!-- pavage de 2x5 photos identiques de RL, avec un carré d'ombre (mais tronqué) soulignant ces photos -->
+        <section id="haut-de-page-a-propos">     
+            <div>    
+                <div id="grille-photos-RL">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                    <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens">
+                </div>
+                <div id="enjoliveur">
+                        <!-- carré de couleur #2C2E51, à placer en absolu -->
+                </div> 
+            </div>           
+        </section>
+        <section id="a-propos">
+            <h1>À propos</h1>
+            <div id="carre-contenu">
+                <p>
+                    Photographe depuis plus de 5 ans,
+                    je réalise des reportages aux photos dynamiques et pertinentes pour vos projets de communication.
+                    Créativité, qualité, et sérénité pour vous! Je gère tout, depuis la direction artistique,
+                    la réalisation du reportage jusqu’à la livraison de vos photos retouchées, prêtes à l’emploi.
+                </p>
+                <h2>Services</h2>
+                <ul>
+                    <li>Portrait seul ou à plusieurs</li>
+                    <li>Shooting mode</li>
+                    <li>Retouches sur mesure</li>
+                    <li>Développement</li>
+                </ul>
+            </div>
+            <div>
+                <a href="portfolio.html" class="bouton bouton-vers-portfolio">
+                    <p> VOIR MON PORTFOLIO </p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- le logo de RL doit apparaître calé à gauche, les pictos tweeter et instagram - dans cet ordre - calés à droite -->
+    <footer>
+    <!------------------------------------------------------------------------------>
+    <!-- Ce footer est à reproduire à l'identique sur les autres pages du site RL -->
+    <!------------------------------------------------------------------------------>
+        <nav> <!-- balise <nav> inutile ici car directement imbriquée dans <footer> -->
+            <a href="index.html">
+                <img id="petit-logo" src="../images/logo.png" title="picto Robbie Lens" alt="Logo Robbie Lens" >
+            </a>
+            <div id="footer-nav">
+                <a target="_blank" href="https://twitter.com/" class="lien-icone">
+                    <img src="../images/twitter.png" alt="Logo Twitter" >
+                </a>
+                <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
+                    <img src="../images/instagram.png" alt="Logo Instagram" >
+                </a>
+            </div>
+        </nav>
+    </footer>
+</body>
+
+</html>

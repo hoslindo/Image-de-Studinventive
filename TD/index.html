@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Accueil - Robbie Lens Photographie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Cette section de code est à conserver pour réutilisation après adaptation aux polices de caractères souhaitées : -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+    <!--  NB Cette instance s'applique aux polices Manrope et Montserrat (voir https://fonts.google.com) -->
+</head>
+
+<!-- structuré de façon standard avec un <header>, un <main> et un <footer> -->
+<body>
+    <!-- le logo de RL doit apparaître calé à gauche, les liens vers les autres pages doivent
+         s'étaler sur 50% (environ) de la page en plein écran, à partir de la droite -->
+    <header>
+    <!------------------------------------------------------------------------------>
+    <!-- Ce header est à reproduire à l'identique sur les autres pages du site RL -->
+    <!------------------------------------------------------------------------------>
+        <nav> <!-- balise <nav> inutile ici car directement imbriquée dans <header> -->
+            <a href="index.html">
+                <img id="grand-logo" src="../images/logo.png" title="logo Robbie Lens" alt="Logo Robbie Lens" >
+            </a>
+            <div id="header-liens">
+                <a href="index.html">       Accueil    </a>
+                <a href="a-propos.html">       À propos   </a>
+                <a href="tarifs.html">    Tarifs      </a>
+                <a href="portfolio.html">   Portfolio  </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- structuré en 3 <section> correspondant aux 3 panneaux de la page d'accueil -->
+    <main id="page-accueil">
+        <!-- Panneau Intro : texte attendu à gauche, avec bouton de lien vers la page portfolio en dessous,
+             et photo à gauche  -->
+        <section id="section-intro">
+            <div id="texte-intro">
+                <h1>    Robbie Lens<br> Photographie    </h1>
+                <p>
+                    Où professionalisme s’allie avec passion. Depuis
+                    plus de 5 ans maintenant, j’exerce mon métier avec la passion
+                    qui m’anime : capturer l’essence de chaque instant.
+                </p>
+                <a class="bouton" id="bouton-vers-section-contact" href="#section-contact">
+                    <p>UN PROJET&nbsp? ÉCRIVEZ-MOI</p>
+                </a>
+            </div>
+            <div id="image-intro">
+                <img src="../images/robbie-lens.png" alt="Portrait avec effet de la photographe Robbie Lens" >            
+            </div>
+        </section>
+
+        <section id="section-projet">
+        <!-- Panneau Projet : sous le titre, 6 photos sur un damier de 2 lignes et 3 colonnes, le tout centré horizontalement
+             avec lien sur chaque photo au survol de la souris vers son affichage plein écran -->
+            <h2>                Mon dernier projet            </h2>
+            <div> <!-- Cette <div> est nécessaire pour centrer la suivante grâce à display:flex & justify-content:center -->
+                <div id="grille-projet"> <!-- la grille de 6 photos -->
+                   
+                    <a class="lien-vers-photo" href="../images/portfolio/paysage7.jpg" target="_blank"> 
+                        <img src="../images/accueil/element-1.png" alt="Twelve apostles - Australie" > 
+                        <div>cliquez pour voir<br> en plein écran</div>
+                    </a>
+                    <a class="lien-vers-photo" href="../images/portfolio/paysage8.jpg" target="_blank"> 
+                        <img src="../images/accueil/element-2.png" alt="Twelve apostles - Australie" > 
+                        <div>cliquez pour voir<br> en plein écran</div>
+                    </a>
+                    <a class="lien-vers-photo" href="../images/portfolio/paysage2.jpg" target="_blank"> 
+                        <img src="../images/accueil/element-3.png" alt="Twelve apostles - Australie" > 
+                        <div>cliquez pour voir<br> en plein écran</div>
+                    </a>
+                    <a class="lien-vers-photo" href="../images/portfolio/paysage3.jpg" target="_blank"> 
+                        <img src="../images/accueil/element-4.png" alt="Twelve apostles - Australie" > 
+                        <div>cliquez pour voir<br> en plein écran</div>
+                    </a>
+                    <a class="lien-vers-photo" href="../images/portfolio/paysage6.jpg" target="_blank"> 
+                        <img src="../images/accueil/element-5.png" alt="Twelve apostles - Australie" > 
+                        <div>cliquez pour voir<br> en plein écran</div>
+                    </a>
+                    <a class="lien-vers-photo" href="../images/portfolio/paysage4.jpg" target="_blank"> 
+                        <img src="../images/accueil/element-6.png" alt="Twelve apostles - Australie" > 
+                        <div>cliquez pour voir<br> en plein écran</div>
+                    </a>
+                </div>
+            </div>
+            <a class="bouton bouton-vers-portfolio" href="portfolio.html">
+                <p> VOIR MON PORTFOLIO </p>
+            </a>
+        </section>
+
+        <section id="section-contact">
+        <!-- Panneau Contact :
+             sous le titre, deux cases à remplir avec des coordonnées (nom et email), une case pour le message -->
+            <h2>                Parlons de votre projet            </h2>
+            <form id="nom-email-message" action="" method="get">
+                <div id="nom-email">
+                    <div id="nom">
+                        <label for="nom">(Prénom &) Nom</label>
+                        <input type="texte" name="nom" class="case-a-remplir" placeholder="Ex: Robie LENS">
+                    </div>
+                    <div id="email">
+                        <label for="email">@dresse</label>
+                        <input type="e-mail" name="email" class="case-a-remplir" placeholder="            @  " required>
+                    </div>
+                </div>
+                <div id="message">
+                    <label for="message"> Votre message  </label>
+                    <textarea name="message" class="case-a-remplir">  </textarea> 
+                </div>
+            </form>
+            <input type="submit" id="bouton-envoi-contact" form="nom-email-message" class="bouton" value="ENVOYER">
+            <!-- <a id="bouton-envoi-contact" href="index.html">   ENVOYER    </a> -->
+
+        </section>
+
+    </main>
+
+    <!-- le logo de RL doit apparaître calé à gauche, les pictos tweeter et instagram - dans cet ordre - calés à droite -->
+    <footer>
+    <!------------------------------------------------------------------------------>
+    <!-- Ce footer est à reproduire à l'identique sur les autres pages du site RL -->
+    <!------------------------------------------------------------------------------>
+        <nav> <!-- balise <nav> inutile ici car directement imbriquée dans <footer> -->
+            <a href="index.html">
+                <img id="petit-logo" src="../images/logo.png" title="picto Robbie Lens" alt="Logo Robbie Lens" >
+            </a>
+            <div id="footer-nav">
+                <a target="_blank" href="https://twitter.com/" class="lien-icone">
+                    <img src="../images/twitter.png" alt="Logo Twitter" >
+                </a>
+                <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
+                    <img src="../images/instagram.png" alt="Logo Instagram" >
+                </a>
+            </div>
+        </nav>
+    </footer>
+</body>
+
+</html>

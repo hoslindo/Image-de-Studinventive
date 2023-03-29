@@ -1,0 +1,733 @@
+/* Déclaration des constantes */
+:root {
+    --bleufonce:#1f2039;
+    --bleuclair:#a5b4fc;
+    --bleuprofond:#2C2E51;
+}
+
+/* Partie 1 */
+/* Mise en place de valeurs par défaut */
+* {
+    font-family:"Montserrat", serif;
+}
+/* Instructions pour les polices de caractères */
+header, footer, #section-projet {
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+}
+a {
+    text-decoration: none;
+}
+/* Instructions pour les couleurs d'arrière-plan et les couleurs et tailles des caractères */
+body {
+    background-color: white; 
+    color: black; 
+}
+#section-intro, #section-contact, #section-tarifs, #section-studiopro {
+    background-color: var(--bleufonce);
+    color:white;
+}
+header, footer, #section-projet {
+    color: black;
+}
+#section-intro h1, #section-contact h2, #portfolio-titre h1 {
+    color:var(--bleuclair);
+    font-size: 55px;
+}
+h2 {
+    font-size:35px;
+    text-align:center;
+}
+label {
+    color: white;
+    font-size: 18px;
+    text-align:left;
+    margin-bottom: 10px;
+}
+.bouton {
+    color: white;
+    /* text-align: center; */
+    font-size: 17px;
+    background-color:var(--bleuclair);
+    border-radius: 38px;
+    padding: 0 19px;
+    border: none;
+}
+a {
+    cursor:pointer;
+}
+/* Instructions dimensionnelles de hauteur */
+body {
+    padding: 5px 0;
+}
+#section-intro {
+    min-height:653px;
+}
+header {
+    min-height:80px;
+}
+footer {
+    min-height: 55px;
+}
+.bouton {
+    box-sizing: border-box;
+    min-height: 51px;
+    /* padding-top: 15px; */
+}
+h2 {
+    padding: 79px 0;
+}
+
+/* Partie 2 */
+/* Instructions pour les en-tête et les pieds de page */ 
+header, footer {
+    margin: 0 15px;
+}
+footer {
+    padding-top: 15px;
+}
+header > nav, footer > nav {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#header-liens {
+    width: 50%;
+    display: flex; 
+    justify-content: space-around;
+}
+#grand-logo {
+    width: 81.95px;
+    height: 42.33px;
+    object-fit: scale-down;
+}
+#petit-logo {
+    width: 56.48px;
+    height: 29.17px;
+    object-fit: scale-down;
+}
+@media screen and (max-width:700px) {
+    header > nav, footer > nav, #header-liens, #footer-nav {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    #header-liens a, #footer-nav a  {
+       padding: 15px;
+    }
+}
+/* Partie 3 */
+/* Instructions pour le panneau "Intro" de index.html */
+#section-intro {
+    display:flex;
+    justify-content: space-between;
+    /* border:thin red solid; */
+}
+#texte-intro {
+    max-width:45%;
+    padding-left:50px;
+    text-align: left;
+    /* border:thin yellow solid;  */
+}
+#image-intro {
+    max-width:45%;
+    padding-right:50px;
+    text-align: right;
+    /* border:thin yellow solid;  */
+}
+#texte-intro h1 {
+    height: 20,5px;
+    padding: 101px 0 0 0; 
+    /* border:thin white solid; */
+}
+#texte-intro > p {
+    height: 108px;
+    padding: 19px 0 0 0;   
+    font-size: 20px;
+    color: white;
+    overflow: auto;
+    /* border: thin white solid; */
+}
+#bouton-vers-section-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 46px 17% 161px 0px;
+}
+#bouton-vers-section-contact > p {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0; 
+}
+#image-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#image-intro img {
+    /* width: 58%; */
+    /* height: 83%; */
+    max-width:425px;
+    max-height: 531px;
+    object-fit: fill;
+    box-shadow: 170px 170px 0 -150px var(--bleufonce), 171px 171px 0 -150px white;
+}
+@media screen and (min-width:450px) and (max-width:950px) {
+    #section-intro {
+        flex-direction:column-reverse;
+        align-items: center;
+    }
+    #texte-intro,#image-intro {
+        max-width: 90%;
+        padding: auto 5px;
+    } 
+    #image-intro {
+        padding-top: 50px;
+    }
+    #bouton-vers-section-contact {
+        margin-bottom: 50px;
+    }
+    #texte-intro > p {
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width:450px) {
+    #section-intro {
+        flex-direction:column-reverse;
+        align-items: center;
+    }
+    #texte-intro,#image-intro {
+        max-width: 90%;
+        padding: auto 5px;
+    } 
+    #image-intro {
+        padding-top: 50px;
+    }
+    #bouton-vers-section-contact {
+        margin-bottom: 50px;
+    }
+    #texte-intro > p {
+        padding-right: 10px;
+    }    
+    #image-intro {
+        display:none;
+    }
+    #texte-intro h1 {
+        font-size: 35px;
+    }
+}
+
+/* Partie 4 */
+/* Instructions pour le panneau "Projet" de index.html */
+#section-projet > div {
+    display: flex;
+    justify-content: center;
+}
+#grille-projet {
+    display: grid;
+    grid-template-columns: 326px 326px 326px; /* pour 3 colonnes de 326px de large */
+    grid-template-rows: 311px 311px;          /* pour 2 lignes de 311px de haut */
+    gap: 17px;                                /* pour un espacement de 17px entre lignes et colonnes */
+}
+#grille-projet a {
+    position:relative;
+}
+#grille-projet a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#grille-projet a div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: black;
+    font-size: 1.8em;
+    text-align: center;
+    display: none;
+}
+#grille-projet a:hover div {
+    display: flex;
+}
+.bouton-vers-portfolio {
+    margin: 79px 33% 79px 37%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bouton-vers-portfolio p {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.lien-vers-photo {
+    cursor: default;
+}
+@media screen and (max-width:1025px) {
+    #grille-projet {
+        grid-template-columns: 326px 326px;   /* pour 2 colonnes de 326px de large */
+        grid-template-rows: 311px 311px 311px;/* pour 3 lignes de 311px de haut */
+        gap: 17px;                            /* pour un espacement de 17px entre lignes et colonnes */
+    }
+}
+@media screen and (max-width:680px) {
+    #grille-projet {
+        grid-template-columns: 326px;
+        grid-template-rows: 311px 311px 311px 311px 311px 311px;     
+    }
+}
+@media screen and (max-width: 320px) {
+    #section-projet {
+        display:none;
+    }
+}
+
+/* Partie 4 */
+/* Instructions pour le panneau "Contact" de index.html */
+#nom-email-message {
+    width: 50%;
+    margin: 0 auto;
+}
+#bouton-envoi-contact {
+    display: block;
+    margin: 79px auto;
+    /* padding-bottom: 15px; */
+    cursor: grab;
+}
+#nom-email {
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: start;
+    gap:5%;
+    width:100%;
+}
+#nom, #email {
+    width:100%;
+}
+#nom input, #email input {
+    height:52px;
+    width:100%;
+    border-radius: 5px;
+    cursor: grab;
+}
+#message textarea {
+    height:207px;
+    width:100%;
+    border-radius: 5px;
+    cursor:grab;
+    resize:both;
+}
+label {
+    display:block;
+}
+/* Dans l'instruction qui suit, l'une ou (exclusif) l'autre des deux déclarations est à conserver ; ces deux
+instructions permettent de distinguer la limite basse de la content-box de #section-contact de la limite basse 
+de la boîte de marge du même conteneur, ce qui fait que le margin-bottom du bouton ENVOYER s'applique dans la
+content-box de #section-contact (sinon ce margin-bottom s'applique aux "conteneurs cousins", en l'occurrence au
+pictos du footer.  */
+#section-contact {
+    /* border-bottom: 1px white solid; */
+    padding-bottom: 1px;
+}
+@media screen and (max-width:700px){
+    #nom-email {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Partie 5 */
+/* Instructions générales pour tarifs.html */
+#page-tarifs {
+    background-color: var(--bleufonce);
+    color:var(--bleuclair);
+    margin:0;
+    padding: 0;
+}
+#section-tarifs, #section-studiopro {
+    width:72%;
+    margin:0 auto;
+    border: none;
+    /* border: medium gold solid; */
+}
+#section-tarifs h2, #section-studiopro h2 {
+    padding: 0;
+    text-align:left;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead, tbody, tr {
+    width:100%;
+} 
+td, th {
+    padding: 0;
+    border-right: 1px var(--bleuclair) solid;
+}
+#section-tarifs div {
+    /* border: medium coral solid; */
+}
+#page-tarifs table {
+    width:100%;
+}
+/* Instructions pour le panneau "Tarifs" de tarifs.html */
+#section-tarifs h2 {
+    font-size: 55px;
+}
+#bouton-vers-panneau-contact {
+    display: block;
+    margin: 0 ;
+}
+#tarifs-bouton {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#tarifs-titres {
+    color:var(--bleuclair);
+    font-size: 20px;
+    text-align: left;
+}
+#tarifs-prestations {
+    color: white;
+    font-size: 14px;
+    text-align: left;
+}
+#tarifs-prix {
+    color:var(--bleuclair);
+    font-size: 16px;
+    text-align: left;
+}
+#tarifs-conditions {
+    color:white;
+    font-size: 10px;
+    text-align: left;
+}
+.tarifs {
+    width:27%;
+}
+.intercalaire {
+    width:9.5%;
+    border:none;
+}
+#section-tarifs td, #section-tarifs th {
+    padding: 10px 0;
+}
+.derniere {
+    border-bottom: 1px var(--bleuclair) solid;
+}
+/* Instructions pour le panneau "Studiopro" de tarifs.html */
+#section-studiopro {
+    padding: 30px 0 60px 0;
+}
+#section-studiopro h2 {
+    font-size: 35px;
+}
+#studiopro-titres {
+    font-size: 16px;
+}
+#studiopro-prestations {
+    font-size: 14px;
+}
+#studiopro-conditions {
+    font-size: 14px;
+}
+#section-studiopro td, #section-studiopro th {
+    border:1px var(--bleuclair) solid; 
+    padding: 15px 0;
+    text-align: center;
+}
+.colonne1 {
+    width:27%;
+}
+.colonne2, colonne3 {
+    width: 36.5%;
+}
+#section-studiopro td {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+@media screen and (min-width:400px) and (max-width:500px) {
+    #tarifs-bouton {
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    #section-studiopro h2 {
+        text-align: center;
+    } 
+}
+@media screen and (max-width:400px) {
+    #tarifs-bouton {
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+        margin-bottom: 15px;
+    } 
+    #section-studiopro h2 {
+        text-align: center;
+    } 
+    #section-tarifs, #section-studiopro {
+        width:95%;
+        overflow: auto;
+    }
+}
+
+/* Partie 6 */
+/* Instructions pour portfolio.html */
+#portfolio-titre {
+    background-color: var(--bleufonce);
+}
+#portfolio-titre h1 {
+   padding:80px;
+   margin:0;
+   display: flex;
+   align-items: center;
+}
+#portfolio-photos {
+   padding:0px 80px;
+}
+#portfolio-photos h2 {
+    margin:0;
+    text-align: left;
+}
+.portfolio-photos-grid {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#grid-paysages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    gap: 15px;
+}
+#grid-portraits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 15px;
+}
+#grid-paysages img, #grid-portraits img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lien-conteneur-photo {
+    position: relative;
+    cursor: default;
+}
+.photo-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: black;
+    display: none;
+  }
+.lien-conteneur-photo:hover .photo-hover {
+    display: flex;
+}
+@media screen and (max-width:1025px) {
+    #grid-paysages {
+        grid-template-columns: 1fr 1fr;   
+        grid-template-rows: 300px 300px 300px;
+        gap: 15px;                            
+    }
+    #grid-portraits {
+        grid-template-columns: 1fr 1fr;   
+        grid-template-rows: 300px 300px 300px;  
+        gap: 15px;                            
+    }}
+@media screen and (max-width:680px) {
+    #grid-paysages {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px 300px;     
+    }
+    #grid-portraits {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 300px 300px 300px 300px 300px;     
+    }}
+@media screen and (max-width: 320px) {
+    .portfolio-photos-grid {
+        display:none;
+    }
+}
+
+/* Partie 7 */
+/* Instructions pour a-propos.html */
+#page-a-propos {
+    background-color: var(--bleufonce);
+    color:var(--bleuclair);
+    margin:0;
+    padding: 0;    
+}
+#haut-de-page-a-propos {
+    padding: 80px 14%;
+}
+#haut-de-page-a-propos > div {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#grille-photos-RL {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 240px 240px;
+    gap: 15px;
+    z-index:2;
+    /* border: thin red solid; */
+}
+#grille-photos-RL img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* border: thin white solid; */
+}
+#enjoliveur {
+    position: absolute;
+    width:60%;
+    height:90%;
+    top: 15%;
+    left:45%;
+    background-color: var(--bleuprofond);
+    z-index:1;
+}
+#a-propos {
+    padding: 80px 80px 1px 80px;
+}
+#a-propos h1 {
+    padding-left: 24%;
+    font-size: 55px;
+}
+#carre-contenu {
+    margin: 101px 30%;
+    padding: 0 10px;
+    font-size: 20px;
+    box-shadow: 60px 80px 0 -50px var(--bleufonce), 61px 81px 0 -50px white;
+}
+#carre-contenu h2 {
+    text-align: left;
+}
+#carre-contenu ul {
+    font-size: 16px;
+}
+@media screen and (min-width:800px) and (max-width:1000px) {
+    #grille-photos-RL {
+        grid-template-columns: 1fr 1fr 1fr 1fr;     
+    }
+    #grille-photos-RL img:nth-child(10) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(9) {
+        display:none;
+    }    
+}
+@media screen and (min-width:600px) and (max-width:800px) {
+    #grille-photos-RL {
+        grid-template-columns: 1fr 1fr 1fr;     
+    }
+    #grille-photos-RL img:nth-child(10) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(9) {
+        display:none;
+    } 
+    #grille-photos-RL img:nth-child(8) {
+        display:none;
+    } 
+    #grille-photos-RL img:nth-child(7) {
+        display:none;
+    }    
+}
+@media screen and (min-width:400px) and (max-width:600px) {
+    #carre-contenu {
+        margin: 101px 10%;
+    }
+    #a-propos {
+        padding-left: 10px;
+    }
+    #grille-photos-RL {
+        grid-template-columns: 1fr 1fr;      
+    }
+    #grille-photos-RL img:nth-child(10) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(9) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(8) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(7) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(6) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(5) {
+        display:none;
+    }    
+}
+@media screen and (min-width:200px) and (max-width:400px) {
+    #carre-contenu {
+        margin: 101px 10%;
+    }
+    #a-propos {
+        padding-left: 10px;
+    }
+    #grille-photos-RL {
+        grid-template-columns: 1fr;      
+    }
+    #grille-photos-RL img:nth-child(10) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(9) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(8) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(7) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(6) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(5) {
+        display:none;
+    }
+    #grille-photos-RL img:nth-child(4) {
+        display:none;
+    } 
+    #grille-photos-RL img:nth-child(3) {
+        display:none;
+    }     
+} 
+@media screen and (max-width:200px) {
+    #carre-contenu {
+        margin: 101px 10%;
+    }
+    #a-propos {
+        padding-left: 10px;
+    }
+    #grille-photos-RL {
+        display:none;        
+    }
+
+} 
