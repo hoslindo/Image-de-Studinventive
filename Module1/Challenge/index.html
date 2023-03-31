@@ -17,7 +17,7 @@
         <header id="Lien-Accueil">
             <div><strong>Agenc<i>eco</i></strong>
                 <nav>
-                    <a href="#Lien-Accueil">Accueil</a>
+                    <a href="#Accueil">Accueil</a>
                     <a href="#Notre_equipe">Notre équipe</a>
                     <a href="#Nos_services">Nos services</a>
                     <a href="#Temoignages">Témoignages</a>
@@ -29,9 +29,9 @@
 
         <main>
 
-            <section id="Accueil">
+            <section id="Accueil">                
                 <h5 id="ligne1-Accueil">Bienvenue dans votre</h5>
-                <h4 id="ligne2-Accueil">agence web écologique</h4>
+                <h4 id="ligne2-Accueil">agence web écologique</h4>                
             </section>
 
             <section id="Notre_equipe">
@@ -40,17 +40,23 @@
                
                 <div id="trombinoscope-Notre_equipe">
                     <div>
-                        <img id="photo_JD" src="ressources/photo-JD.jpg" alt="photo Julie Dupond">
+                         <div class="cercle-Notre_equipe">
+                            <img id="photo_JD" src="ressources/photo-JD.jpg" alt="photo Julie Dupond">                    
+                        </div>
                         <h2 class="nom-Notre_equipe">Julie Dupond</h2>
                         <p class="cv-Notre_equipe">Sed ut perspiciatis unde omnis iste natus error</p>
                     </div>
                     <div>
-                        <img id="photo_RS" src="ressources/photo-RS.jpg" alt="photo Romeo Sylla">
+                        <div class="cercle-Notre_equipe">
+                            <img id="photo_RS" src="ressources/photo-RS.jpg" alt="photo Romeo Sylla">                            
+                        </div>
                         <h2 class="nom-Notre_equipe">Romeo Sylla</h2>
                         <p class="cv-Notre_equipe">Sed ut perspiciatis unde omnis iste natus error</p>
                     </div>
                     <div>
-                        <img id="photo_JB" src="ressources/photo-JB.jpg" alt="photo Jabier Bardem">
+                        <div class="cercle-Notre_equipe">
+                            <img id="photo_JB" src="ressources/photo-JB.jpg" alt="photo Jabier Bardem">                          
+                        </div>
                         <h2 class="nom-Notre_equipe">Javier Bardem</h2>
                         <p class="cv-Notre_equipe">Sed ut perspiciatis unde omnis iste natus error</p>
                     </div>                                                       
@@ -59,26 +65,28 @@
             </section>
             
             <section id="Temoignages">
-                <div id="bande-blanche-Temoignage">
-
-                </div>
-                <div class="unite-Temoignages">
-                    <h4>2500</h4>
-                    <p>clients satisfaits</p>
-                </div>
-                <div class="unite-Temoignages">
-                    <h4>2500</h4>
-                    <p>clients satisfaits</p>
-                </div>
-                <div class="unite-Temoignages">
-                    <h4>2500</h4>
-                    <p>clients satisfaits</p>
-                </div>
-                <div class="unite-Temoignages">
-                    <h4>2500</h4>
-                    <p>clients satisfaits</p>
-                </div>
+                <div class="bande-blanche">
+                </div>   <!-- pour faire une bande blanche de la hauteur du header --> 
+                <div id="expression-Temoignages">
+                    <div class="unite-Temoignages">
+                        <h4>2500</h4>
+                        <p>clients satisfaits</p>
+                    </div>
+                    <div class="unite-Temoignages">
+                        <h4>2500</h4>
+                        <p>clients satisfaits</p>
+                    </div>
+                    <div class="unite-Temoignages">
+                        <h4>2500</h4>
+                        <p>clients satisfaits</p>
+                    </div>
+                    <div class="unite-Temoignages">
+                        <h4>2500</h4>
+                        <p>clients satisfaits</p>
+                    </div>
+                </div>              
             </section>
+
             <section id="Nos_services">
                 <h1 id="titre-Nos_services" class="titre-section">Nos services</h1>
                 <div id="pictos-Nos_services">
@@ -95,106 +103,123 @@
                         <h3>Audit qualité</h3>
                     </div>
                 </div>
-
             </section>
+
             <section id="Contactez_nous">
-                <h4 id="titre-Contactez_nous">Contactez-nous</h4>
-                <form action="" method="get">
-                    <legend>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</legend>
-                    <div>
-                        <div id="entree-Nom">
-                            <label>Nom</label>
-                            <input type="text" name="nom">
+                <div class="bande-blanche"></div>
+                <div id="expression-Contactez_nous">
+                    <h4 id="titre-Contactez_nous">Contactez-nous</h4>                    
+                    <form action="" method="get">
+                        <legend>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</legend>
+                        <div id="panneau-Contactez_nous">
+                            <div id="sous-panneau-Contactez_nous">
+                                <div id="entree-Nom">
+                                    <label>Nom</label>
+                                    <input type="text" name="nom">
+                                </div>
+                                <div id="entree-Categorie">
+                                    <label>Catégorie</label>
+                                    <input type="text" name="categorie">
+                                </div>
+                                    <div id="entree-Telephone">
+                                    <label>Téléphone</label>
+                                    <input type="tel" name="telephone">
+                                </div>
+                                <div id="entree-Ville">
+                                    <label>Ville</label>
+                                    <input type="text" name="ville">
+                                </div>
+                            </div>
+                            <div id="entree-Email">
+                                <label>Email</label>
+                                <input type="email" name="email">
+                            </div>
+                            <div id="entree-Message">
+                                <label>Message</label> 
+                                <textarea></textarea>
+                            </div>
                         </div>
-                        <div id="entree-Categorie">
-                            <label>Catégorie</label>
-                            <input type="text" name="cateforie">
+                        <div id="bouton-Contactez_nous">
+                            <button type="submit">Envoyer</button>
                         </div>
-                        <div id="entree-Telephone">
-                            <label>Téléphone</label>
-                            <input type="tel">
-                        </div>
-                        <div id="entree-Ville">
-                            <label>Ville</label>
-                            <input type="text">
-                        </div>
-                        <div id="entree-Email">
-                            <label>Email</label>
-                            <input type="email">
-                        </div>
-                        <div id="entree-Message">
-                            <label>Message</label> 
-                            <textarea></textarea>
-                        </div>
-                    </div>
-                    <button type="submit">ENVOYER</button>
-                </form>
+                    </form>
+                </div> 
                 <div id="cadre-Contactez_nous">
-                    <img src="ressources/Photo-réunion.jpg" alt="scène de vie en réunion">
-                    <div id="a-propos-de-nous-Contactez-nous">
+                    <div id="photo-Contactez_nous" class="fenetre-Contactez_nous">
+                        <!-- conteneur vide avec la photo en background (à déclarer en css) -->
+                    </div>
+                    <div id="a-propos-de-nous-Contactez_nous" class="fenetre-Contactez_nous">
                         <h2>A propos de nous</h2>
                         <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
                             molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-                        <div id="encart-Contactez-nous">
+                        <div id="encart-Contactez_nous">
                             <div>
-                                <img src="ressources/picto-monde.jpg" alt="pictogramme: globe terrestre">
+                                <div class="a-propos-de-nous-pictos">
+                                    <img src="ressources/picto-monde.jpg" alt="pictogramme: globe terrestre">                                
+                                </div>                                
                                 <h6>Ecologie</h6>
                             </div>
                             <div>
-                                <img src="ressources/picto-goutte-d-eau.jpg" alt="pictogramme: goutte d'eau sur main">
+                                <div class="a-propos-de-nous-pictos">
+                                    <img src="ressources/picto-goutte-d-eau.jpg" alt="pictogramme: goutte d'eau sur main">                                
+                                </div>
                                 <h6>Responsable</h6>
                             </div>
                             <div>
-                                <img src="ressources/picto-horloge.jpg" alt="pictogramme: horloge">
+                                <div class="a-propos-de-nous-pictos">
+                                    <img src="ressources/picto-horloge.jpg" alt="pictogramme: horloge">
+                                </div>
                                 <h6>24/7 Assistance</h6>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                            
             </section>
 
             <section id="Notre_galerie">
+                <div class="bande-blanche"></div>
                 <h1 id="titre-Notre_galerie">Notre galerie</h1>
                 <p id="texte-Notre_galerie">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                    qui officia deserunt mollit anim id est laborum.</p>
-                <img src="ressources/Photo-du-bas.jpg" alt="photo d'un bureau avec ordinateur au premier plan">
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <div id="photo-ordi">
+                    <img src="ressources/Photo-du-bas.jpg" alt="photo d'un bureau avec ordinateur au premier plan">                
+                </div>    
                 <form id="boutons-de-defilement-Notre_galerie" action="" method="get">
-                    <button type="button" name="a-gauche">&lsaquo;</button>
-                    <button type="button" name="a-droite">&rsaquo;</button>
+                    <div>
+                        <button type="button" name="a-gauche">&lsaquo;</button>
+                        <button type="button" name="a-droite">&rsaquo;</button>
+                    </div>                    
                 </form>
             </section>
 
         </main>
 
         <footer>
-            <div id="haut-du-footer">
-                <div id="content-footer" class="div-footer">
-                    <h6>Content</h6>
-                    <p>Excepteur sint occaecat cupidatat non proident.</p>
-                </div>
+            <div id="haut-du-footer">                
                 <div id="Content-footer" class="div-footer">
                     <h6>Content</h6>
-                    <p>Excepteur sint occaecat cupidatat non proident.</p>
+                    <p class="texte-footer">Excepteur sint occaecat cupidatat non proident.</p>
                 </div>
                 <div id="Informations-footer" class="div-footer">
                     <h6>Informations</h6>
-                    <p>Excepteur sint occaecat cupidatat non proident.</p>
+                    <p class="texte-footer">Excepteur sint occaecat cupidatat non proident.</p>
                 </div>
                 <div id="Services-footer" class="div-footer">
                     <h6>Services</h6>
-                    <p>Excepteur sint occaecat cupidatat non proident.</p>
+                    <p class="texte-footer">Excepteur sint occaecat cupidatat non proident.</p>
                 </div>
                 <div id="Aide-footer" class="div-footer">
                     <h6>Aide</h6>
-                    <p>Excepteur sint occaecat cupidatat non proident.</p>
+                    <p class="texte-footer">Excepteur sint occaecat cupidatat non proident.</p>
                 </div>
                 <div id="contact-footer" class="div-footer">
-                    <p id="picto-telephone">&#128222;</p>
+                    <p id="picto-telephone" class="pictos">
+                        <img src="ressources/telephone.png" alt="pictogramme de téléphone">
+                    </p>
                     <p>+33 0 00 00 00 00<br>+33 0 00 00 00 00</p>
-                    <p id="picto-localisation">&#9758;</p>
+                    <p id="picto-localisation" class="pictos">
+                        <img src="ressources/pin-de-localisation.png" alt="pictogramme de localisation"
+                    </p>
                     <p>75001 Paris<br>France</p>
                 </div>    
             </div>
@@ -202,13 +227,22 @@
                 <p>Copyright &copy; 2021 AGENCECO</p>
                 <div>
                     <a target="_blank" href="https://facebook.com/" class="lien-icone">
-                        <img src="ressources/facebook.png" alt="Logo Facebook" >
+                        <div id="lien-FB">
+                            <!-- A laisser vide et mettre l'icône FB en background -->
+                        </div>
+                        <!-- <img src="ressources/facebook.png" alt="Logo Facebook" > -->
                     </a>
                     <a target="_blank" href="https://twitter.com/" class="lien-icone">
-                        <img src="ressources/twitter.png" alt="Logo Twitter" >
+                        <div id="lien-TW">
+                            <!-- A laisser vide et mettre l'icône FB en background -->
+                        </div>
+                        <!-- <img src="ressources/twitter.png" alt="Logo Twitter" > -->
                     </a>
                     <a target="_blank" href="https://www.instagram.com/" class="lien-icone">
-                        <img src="ressources/instagram.png" alt="Logo Instagram" >
+                        <div id="lien-IN">
+                            <!-- A laisser vide et mettre l'icône FB en background -->
+                        </div>
+                        <!-- <img src="ressources/instagram.png" alt="Logo Instagram" > -->
                     </a>
                 </div>
             </div>

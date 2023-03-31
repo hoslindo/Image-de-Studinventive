@@ -1,11 +1,13 @@
 /* Déclaration des constantes (les couleurs + hauteur du <header>) */
 :root {
     --background-dark:#053B44;
+    --background-lightgrey:#eeeeee;
     --text:#565E65;
     --title2:#029D5B;
     --titles:#1C2126;
     --yellow:#D5F31F;
-    --headerheight:75px;
+    --headerheight:74px;
+    --headerbigheight:179px;
     --Accueilpaddingright:5%;
 }
 /* Sélection de la police de caractères sans-serif pour tous les conteneurs (police standard) */
@@ -16,13 +18,31 @@
 h1 {
     color:var(--title2)
 }
+h3 {
+    color:var(--background-dark);
+    font-size: 2em;
+}
 h4 {
     color:var(--yellow);
+}
+h6 {
+    font-size: 1em;
+    font-weight: bold;
+    margin:0;
 }
 .titre-section {
     font-size: 4em;
     font-weight: light;
 }
+/* Déclaration du conteneur <div> qui matérialise une bande blanche de la hauteur du header */
+.bande-blanche {
+    background-color: white;
+    box-sizing: border-box;
+    width:100%;
+    height: var(--headerheight);
+    border-bottom:1px white solid
+}
+
 /* Codage du header */
 header {
     background-color: white;
@@ -30,7 +50,7 @@ header {
     box-sizing: border-box;
     width: 100%;
     height:var(--headerheight);
-    position:sticky;
+    position:fixed;
     top:0px
 }
 header > div {
@@ -57,15 +77,15 @@ header nav a {
 }
 /* Codage de la section Accueil */
 #Accueil {
-   background-image: url("ressources/Photo-du-haut.jpg");
-   background-origin: border-box;
-   background-size: cover;
-   background-attachment: local;
-   background-position: center;
-   box-sizing: border-box;
-   width:100%;
-   height: 700px;
-   border-top: 1px white solid;
+    border-top: 1px white solid; 
+    background-image: url("ressources/Photo-du-haut.jpg");
+    background-origin: border-box;
+    background-size: cover;
+    background-attachment: local;
+    background-position: center;
+    box-sizing: border-box;
+    width:100%;
+    height: 700px;
 }
 #ligne1-Accueil {
     color: white;
@@ -107,13 +127,28 @@ header nav a {
 #trombinoscope-Notre_equipe > div {
     width:300px;
 }
-#trombinoscope-Notre_equipe img {
-    display: block;
+.cercle-Notre_equipe {
     width:300px;
     height: 300px;
     object-fit: cover;
     border: 1px white solid;
     border-radius: 50% 50% 50% 50%;
+    overflow: hidden;
+}
+#photo_JD {
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+}
+#photo_RS {
+    width: 180%;
+    height: auto;
+    margin: -120px 0px 0px -110px;
+}
+#photo_JB {
+    width: 150%;
+    height: auto;
+    margin: -30px 0px 0px -75px;
 }
 .nom-Notre_equipe {
     text-align: center;
@@ -126,7 +161,9 @@ header nav a {
 }
 /* Codage de la section Témoignages */
 #Temoignages {
-    margin-top: var(--headerheight);
+    border-bottom:1px white solid;
+}
+#expression-Temoignages {
     padding: 0 var(--Accueilpaddingright);
     background-color: var(--background-dark);
     display:flex;
@@ -137,11 +174,304 @@ header nav a {
     font-size: 2.5em;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 0.5em;
 }
 .unite-Temoignages > p {
     font-size:1.75em;
     font-weight: bold;
     text-align: center;
     color:white;
+    padding-bottom: 1em;
 }
+/* Codage de la section Nos_services */
+#Nos_services {
+    padding-top: var(--headerheight);
+    border-bottom: 1px white solid;
+}
+#titre-Nos_services {
+    text-align: center;   
+    margin-bottom: 200px;
+}    
+#pictos-Nos_services {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#creation-Nos_services, #audit-Nos_services {
+    width: 30%;
+    min-width: 200px;
+}
+#creation-Nos_services > div, #audit-Nos_services >div {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-lightgrey);
+    border-radius: 50px;
+    align-items: center;
+    padding: 100px 20%;
+    overflow: hidden;
+    height: 150px;
+}
+#creation-Nos_services > h3, #audit-Nos_services >h3 {
+    text-align: center;
+}
+/* Codage de la section Contactez_nous */
+#expression-Contactez_nous {
+    padding: 0 var(--Accueilpaddingright) 60px var(--Accueilpaddingright);;
+    background-color: var(--background-dark);
+}
+#expression-Contactez_nous h4 {
+    text-align: center;  
+    padding-top: 40px; 
+    margin-bottom: 40px; 
+    color: var(--yellow); 
+    font-size: 4em;  
+}
+#expression-Contactez_nous legend {
+    color:white;
+    font-size:2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:40px;
+}
+#expression-Contactez_nous form {
+    overflow: auto;
+}
+#panneau-Contactez_nous input {
+    background-color: var(--background-dark);
+    width: 100%;
+    border:none;
+}
+#panneau-Contactez_nous label {
+    color:white;
+    font-weight: bold;
+}
+#sous-panneau-Contactez_nous {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#sous-panneau-Contactez_nous > div {
+    width: 45%;
+    min-width: 400px;
+    border-bottom: 1px white solid;
+    display:flex;
+    justify-content: left;
+    margin-bottom: 3em;
+}
+#entree-Email {
+    width: 100%;
+    border-bottom: 1px white solid;
+    display:flex;
+    justify-content: left;
+    margin-bottom: 3em;
+}
+#entree-Message {
+    width: 100%;
+    border-bottom: 1px white solid;
+    margin-bottom: 2em;
+}
+#entree-Message > label {
+    display:block;
+}
+#entree-Message > textarea {
+    background-color: var(--background-dark);
+    border:none;
+    width:100%;
+    height: 200px;
+    resize: none;
+}
+#bouton-Contactez_nous {
+    text-align: right;
+}
+#bouton-Contactez_nous > button {
+    background-color: var(--yellow);
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+#cadre-Contactez_nous {
+    margin: var(--headerheight) var(--Accueilpaddingright);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 5%;
+}
+.fenetre-Contactez_nous {
+    box-sizing: border-box;
+    width: 45%;
+    border-radius: 50px;
+}
+#photo-Contactez_nous {
+    background-image: url("ressources/Photo-réunion.jpg");
+    background-size: 150%;
+    background-position: center;
+}
+#a-propos-de-nous-Contactez_nous {
+    padding: 30px 5%;
+    border: 5px var(--background-lightgrey) solid;
+}
+#a-propos-de-nous-Contactez_nous > h2 {
+    text-align: center;
+}
+#a-propos-de-nous-Contactez_nous > p {
+    text-align: center;
+    color: var(--text);
+}
+#encart-Contactez_nous {
+    display:flex;
+    justify-content: space-between;
+    padding: 50px 0 20px 0;
+    flex-wrap: wrap;
+}
+#encart-Contactez_nous > div {
+    width:30%;
+    min-width: 100px;
+    text-align: center;
+    color:var(--background-dark);
+}
+.a-propos-de-nous-pictos {
+    display:flex;
+    justify-content: center;
+}
+/* Codage de la section Notre_galerie */
+#Notre_galerie {
+    margin: 0 var(--Accueilpaddingright) ;
+}
+#titre-Notre_galerie {
+    text-align: center;
+    margin: 20px auto;
+}
+#Notre_galerie > p {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px auto;
+}
+#photo-ordi {
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 50px;
+    overflow: hidden;
+}
+#photo-ordi > img {
+    width:120%;
+    height: auto;
+}
+#boutons-de-defilement-Notre_galerie > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--headerheight);
+}
+#boutons-de-defilement-Notre_galerie button {
+    width:50px;
+    height:50px;
+    font-size: 2.25em;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+    background-color: black;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+#boutons-de-defilement-Notre_galerie button:hover {
+    color:black;
+    background-color: white;
+}
+ /* Codage du footer  */
+ footer {
+    color:white
+ }
+ #haut-du-footer {
+    padding: 0  var(--Accueilpaddingright);
+    background-color: var(--background-dark);    
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+ }
+ #haut-du-footer > div {
+    margin: 40px auto;
+    min-width: 90px;
+    text-align: center;
+    width:15%;
+ }
+ .texte-footer {
+    font-size:0.5em;
+    font-weight: bold;
+    margin-top: 27px;
+ }
+ #contact-footer {
+    display:grid;
+    grid-template-columns: 33% 67%;
+    grid-template-rows: auto;
+ }
+ #contact-footer p {
+    font-size:0.5em;
+    font-weight: bold;
+ }
+ .pictos {
+    overflow: hidden;
+ }
+ #picto-telephone >img {
+    width:40%;
+    object-fit: contain;
+ }
+ #picto-localisation > img {
+    width:35%;
+    object-fit: contain;
+ }
+ #bas-du-footer {
+    padding: 30px  var(--Accueilpaddingright);
+    background-color: rgb(12, 38, 34);    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ #bas-du-footer > p {
+    font-size:0.5em;
+    font-weight: bold;
+    text-align: left;   
+ }
+ #bas-du-footer > div {
+    text-align:right;
+ }
+ .lien-icone {
+    display: inline-block;  
+ }
+ .lien-icone div {
+    width: 30px;
+    height: 30px;
+    border: 1px white solid;
+    border-radius: 5px;
+ }
+ #lien-FB {
+    /* background-color: white; */
+    background-image: url('ressources/facebook.png');
+    background-size: cover;
 
+ }
+ #lien-TW {
+    /* background-color: white; */
+    background-image: url('ressources/twitter.png');
+    background-size: cover;
+}
+ #lien-IN {
+    background-color: white;
+    background-image: url('ressources/instagram.png');
+    background-size: cover;
+}
+/* Adaptation "responsive" */
+/* Adaptation au header */
+@media screen and (max-width:500px) {
+    .bande-blanche {
+        height: calc(var(--headerbigheight)-1px);
+    }
+    
+    header {
+        height:var(--headerbigheight);        
+    }
+    header nav {
+        /* width:80%;         */
+        flex-direction: column;
+        justify-content: start;        
+    }    
+}
