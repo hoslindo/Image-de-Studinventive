@@ -32,7 +32,7 @@ h6 {
 }
 .titre-section {
     font-size: 4em;
-    font-weight: light;
+    font-weight:bold;
 }
 /* Déclaration du conteneur <div> qui matérialise une bande blanche de la hauteur du header */
 .bande-blanche {
@@ -130,7 +130,6 @@ header nav a {
 .cercle-Notre_equipe {
     width:300px;
     height: 300px;
-    object-fit: cover;
     border: 1px white solid;
     border-radius: 50% 50% 50% 50%;
     overflow: hidden;
@@ -138,16 +137,19 @@ header nav a {
 #photo_JD {
     width: 100%;
     height: auto;
+    object-fit: cover;    
     margin: 0px 0px 0px 0px;
 }
 #photo_RS {
     width: 180%;
     height: auto;
+    object-fit: cover;    
     margin: -120px 0px 0px -110px;
 }
 #photo_JB {
     width: 150%;
     height: auto;
+    object-fit: cover;
     margin: -30px 0px 0px -75px;
 }
 .nom-Notre_equipe {
@@ -227,7 +229,7 @@ header nav a {
     color: var(--yellow); 
     font-size: 4em;  
 }
-#expression-Contactez_nous legend {
+#expression-Contactez_nous .legende {
     color:white;
     font-size:2em;
     font-weight: bold;
