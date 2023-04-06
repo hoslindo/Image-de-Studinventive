@@ -10,12 +10,16 @@
     --headerbigheight:179px;
     --Accueilpaddingright:5%;
 }
+* {
+    margin:0;
+    padding:0;
+}
 /* Sélection de la police de caractères sans-serif pour tous les conteneurs (police standard) */
 * {
     font-family: sans-serif;
 }
 /* Déclaration des caractéristiques constantes vs balise */
-h1 {
+h5 {
     color:var(--title2)
 }
 h3 {
@@ -31,6 +35,8 @@ h6 {
     margin:0;
 }
 .titre-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
     font-size: 4em;
     font-weight:bold;
 }
@@ -105,6 +111,7 @@ header nav a {
 }
 /* Codage de la section Notre_equipe */
 #Notre_equipe {
+    /* margin-top: var(--headerheight); */
     /* padding-top: var(--headerheight); */
     border-bottom: 1px white solid;
 }
@@ -225,7 +232,7 @@ header nav a {
 #expression-Contactez_nous h4 {
     text-align: center;  
     padding-top: 40px; 
-    margin-bottom: 40px; 
+    margin: 0 0 40px 0; 
     color: var(--yellow); 
     font-size: 4em;  
 }
@@ -237,6 +244,7 @@ header nav a {
     margin-bottom:40px;
 }
 #expression-Contactez_nous form {
+    color:white;
     overflow: auto;
 }
 #panneau-Contactez_nous input {
@@ -245,6 +253,7 @@ header nav a {
     border:none;
 }
 #panneau-Contactez_nous label {
+    padding-right: 5px;
     color:white;
     font-weight: bold;
 }
@@ -280,6 +289,7 @@ header nav a {
     background-color: var(--background-dark);
     border:none;
     width:100%;
+    box-sizing: border-box;
     height: 200px;
     resize: none;
 }
@@ -342,12 +352,11 @@ header nav a {
 }
 #titre-Notre_galerie {
     text-align: center;
-    margin: 20px auto;
 }
 #Notre_galerie > p {
     text-align: center;
     font-weight: bold;
-    margin: 20px auto;
+    margin: 0px auto;
 }
 #photo-ordi {
     margin: 20px auto;
