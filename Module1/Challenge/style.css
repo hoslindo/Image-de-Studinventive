@@ -244,16 +244,16 @@ header nav a {
     margin-bottom:40px;
 }
 #expression-Contactez_nous form {
-    color:white;
     overflow: auto;
 }
 #panneau-Contactez_nous input {
     background-color: var(--background-dark);
     width: 100%;
+    color:white;
     border:none;
 }
 #panneau-Contactez_nous label {
-    padding-right: 5px;
+    padding-right: 10px;
     color:white;
     font-weight: bold;
 }
@@ -289,6 +289,7 @@ header nav a {
     background-color: var(--background-dark);
     border:none;
     width:100%;
+    color:white;
     box-sizing: border-box;
     height: 200px;
     resize: none;
